@@ -1,0 +1,21 @@
+
+La configuración inicial del Cmake (y del GnuMake que no me jaló) podemos encontrar en
+https://www.codeproject.com/Articles/1184735/Quick-Start-to-Use-Visual-Studio-Code-for-Cplusplu
+
+Habrá que crear .vscode\c_cpp_properties.json a través de presionar el foquito de propuesta y añadir el path
+   https://code.visualstudio.com/docs/languages/cpp
+   
+No parecía encontrar algunos de los includes por lo que en .vscode\c_cpp_properties.json se los metí en todas las plataformas
+ "/usr/include",
+ "/usr/include/c++/6.4.1",
+(No me gustó que no supiera recursionar, se me figura esto va a crecer exponencialmente con las bibliotecas de 
+    boost, poco, redis, memcahed, fix8, fastflow, etc...)
+
+Para ver cómo meter el ejecutable primario y referenciar las librerías propias
+https://cmake.org/cmake-tutorial/
+
+Si los shortcuts no te gustan, primero ve en donde están apuntando en el el Pallete (Control+Shift+P)
+    - Por ejemplo, para el Cmake:build tenía el F7
+    - File -> Preferences -> Keyboard Shortcuts -> {deseado} (control derecho, reasignar)
+
+* Adición de nuevos módulos CPP deberán meterse en CmakeLists.txt del raíz (no del testing, ojo)
